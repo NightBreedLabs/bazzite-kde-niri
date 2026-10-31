@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Documented the Steam dropdown menu workaround using xwayland-satellite 0.8.3,
+  with an optional user-local build, Niri path override, activation checks and
+  rollback. Linked from README, gaming and troubleshooting. Build checks passed;
+  visual Steam menu verification after session restart remains pending.
+
 ## 0.1.0-preview — October 30, 2026
 
 - Began a standalone, community-safe Bazzite KDE + Niri + Noctalia configuration kit.

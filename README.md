@@ -17,6 +17,10 @@ A community-ready, **CachyOS-inspired** Niri + Noctalia configuration that lives
 
 > Screenshots and a clean-machine demo will be added after real-world testing.
 
+**Steam menus flash and close in Niri?** See the
+[Steam dropdown menu workaround](docs/STEAM-MENUS.md) for the xwayland-satellite
+0.8.3 fix, setup, verification status and rollback.
+
 ## Start here, tiny steps
 
 1. **Install Bazzite KDE** from its official site and sign into Plasma once.

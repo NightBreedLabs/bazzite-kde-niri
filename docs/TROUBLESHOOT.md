@@ -7,6 +7,7 @@
 | File upload button does nothing | `grep FileChooser ~/.config/xdg-desktop-portal/niri-portals.conf` | The GTK FileChooser preference may be missing; portal services can need a session restart. |
 | Duplicate keyrings, repeated logins | KWalletManager, login PAM integration, Noctalia Secret Service docs | The `kwallet` portal line isn't enough to unlock or migrate stored tokens. |
 | Cannot see old X11 games | `command -v xwayland-satellite` | Xwayland is necessary for many X11 apps. Don't start duplicate satellites. |
+| Steam menus flash and immediately close | `rpm -q xwayland-satellite`; [Steam menu guide](STEAM-MENUS.md) | Upstream 0.8.3 includes a popup fix; custom binary activation requires a normal Niri logout/login. |
 | FileBot shows blank gray popup | Check `_JAVA_AWT_WM_NONREPARENTING=1` and dialog rules | Java window manager compatibility is app-specific. |
 | Screen sharing fails | Check `xdg-desktop-portal-gnome` and session portals | GTK FileChooser and screencasting have different portal backends. |
 | Hotkey doesn't work | `grep Mod+ ~/.config/niri/cfg/shortcuts.kdl` | Conflict, a mistyped command or old Niri version. |

@@ -17,6 +17,13 @@ Some games still speak **X11**. Niri is Wayland-native, so it uses **Xwayland Sa
 
 Read: https://niri-wm.github.io/niri/Integrating-niri.html
 
+### Steam dropdown menus disappear immediately
+
+Steam's top menus can flash and close with xwayland-satellite 0.8.2. Upstream
+0.8.3 includes a Steam popup fix. See the [Steam menu guide](STEAM-MENUS.md)
+for the package-first approach, optional user-local build, Niri activation,
+verification status and rollback. The installer does not apply this workaround.
+
 ## Easy test drive
 
 1. Start a simple game under **Plasma** and note how it behaves.
