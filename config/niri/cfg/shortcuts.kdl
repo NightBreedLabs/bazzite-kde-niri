@@ -1,0 +1,44 @@
+// Mod = Windows/Super key. Easy shortcuts for KDE + Noctalia.
+binds {
+    Mod+Return       hotkey-overlay-title="Konsole terminal" { spawn "konsole"; }
+    Mod+E            hotkey-overlay-title="Dolphin file manager" { spawn "dolphin"; }
+    Mod+Shift+E      hotkey-overlay-title="Kate text editor" { spawn "kate"; }
+
+    Mod+Ctrl+Return  hotkey-overlay-title="Noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S            hotkey-overlay-title="Noctalia control center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+S      hotkey-overlay-title="Noctalia settings" { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+Shift+Return hotkey-overlay-title="Noctalia wallpapers" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+V            hotkey-overlay-title="Noctalia clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Shift+C      hotkey-overlay-title="Noctalia calendar" { spawn-sh "noctalia msg panel-toggle control-center calendar"; }
+    Mod+Shift+Q      hotkey-overlay-title="Session menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Alt+L        hotkey-overlay-title="Lock screen" { spawn-sh "noctalia msg session lock"; }
+
+    Mod+Q            { close-window; }
+    Mod+Left         { focus-column-left; }
+    Mod+Right        { focus-column-right; }
+    Mod+Up           { focus-window-up; }
+    Mod+Down         { focus-window-down; }
+    Mod+H            { focus-column-left; }
+    Mod+L            { focus-column-right; }
+    Mod+J            { focus-window-down; }
+    Mod+K            { focus-window-up; }
+    Mod+R            { switch-preset-column-width; }
+    Mod+F            { maximize-column; }
+    Mod+T            { toggle-window-floating; }
+    Mod+Tab          { toggle-overview; }
+    Mod+1            { focus-workspace 1; }
+    Mod+2            { focus-workspace 2; }
+    Mod+3            { focus-workspace 3; }
+    Mod+4            { focus-workspace 4; }
+    Mod+5            { focus-workspace 5; }
+    Mod+6            { focus-workspace 6; }
+    Mod+7            { focus-workspace 7; }
+    Mod+8            { focus-workspace 8; }
+    Mod+9            { focus-workspace 9; }
+
+    Print            { screenshot; }
+    Shift+Print      hotkey-overlay-title="Noctalia screenshot marker" { spawn-sh "noctalia msg screenshot-annotate"; }
+    Mod+Escape       allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape { show-hotkey-overlay; }
+    Ctrl+Alt+Delete  { quit; } // Returns to the login screen; does not remove KDE.
+}

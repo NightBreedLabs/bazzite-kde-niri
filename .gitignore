@@ -1,0 +1,13 @@
+# Never collect personal live configs or accounts here.
+*.key
+*.pem
+*.sqlite*
+*.db
+*.log
+*.bak
+*.backup*
+.env*
+__pycache__/
+.DS_Store
+/private/
+/backups/

@@ -1,0 +1,8 @@
+// Noctalia supplies the bar, wallpaper, launcher and control center.
+spawn-at-startup "noctalia"
+// This KWallet PAM helper can participate in the SDDM login unlock flow.
+// It does not magically unlock a wallet if PAM is not properly configured.
+spawn-at-startup "/usr/libexec/pam_kwallet_init"
+// Do not also start a second GNOME keyring or force-start kwalletd6.
+// KDE services should normally activate when needed through DBus.
+// Niri >=25.08 launches xwayland-satellite automatically. Do NOT spawn it here.

@@ -1,0 +1,7 @@
+// Your mouse, keyboard and trackpad. Leave hardware-specific settings alone.
+input {
+    keyboard { xkb {} }
+    touchpad { tap }
+    // Focus the window your pointer is over, like the CachyOS preset.
+    focus-follows-mouse
+}

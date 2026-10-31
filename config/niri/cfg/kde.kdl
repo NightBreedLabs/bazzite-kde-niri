@@ -1,0 +1,11 @@
+// Settings specific to the Niri session. Plasma's config is not edited.
+prefer-no-csd
+environment {
+    // Some desktop autostart entries can tell Niri apart from Plasma.
+    XDG_CURRENT_DESKTOP "niri:KDE"
+    _JAVA_AWT_WM_NONREPARENTING "1" // Helps some Java/Swing programs.
+}
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 24
+}

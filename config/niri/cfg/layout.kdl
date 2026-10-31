@@ -1,0 +1,11 @@
+// The endless side-by-side window layout, inspired by CachyOS Niri.
+layout {
+    gaps 16
+    center-focused-column "never"
+    background-color "transparent" // Noctalia draws the wallpaper.
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+}

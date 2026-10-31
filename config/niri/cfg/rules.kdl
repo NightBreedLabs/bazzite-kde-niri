@@ -1,0 +1,34 @@
+// Soft corners, matching the original CachyOS-inspired desktop.
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+}
+
+// Do not turn ordinary Steam game windows into unnecessary popups.
+// Only float known Steam auxiliary/dialog windows.
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// File pickers sometimes have their own app ID. When they do, float them.
+window-rule {
+    match app-id=r#"^xdg-desktop-portal-.*"#
+    open-floating true
+}
+window-rule {
+    match app-id="zenity"
+    open-floating true
+}
+
+// Optional FileBot support. If FileBot is absent these rules do nothing.
+window-rule {
+    match app-id="net-filebot-Main" title=r#"^FileBot \d+"#
+    default-column-width { proportion 0.66667; }
+}
+window-rule {
+    match app-id="net-filebot-Main"
+    exclude title=r#"^FileBot \d+"#
+    open-floating true
+}
